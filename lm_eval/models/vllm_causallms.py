@@ -622,7 +622,6 @@ class VLLM(TemplateLM):
                 requests=context_encoding,
                 generate=True,
                 max_tokens=max_gen_toks,
-                stop=until,
                 **kwargs,
             )
 
