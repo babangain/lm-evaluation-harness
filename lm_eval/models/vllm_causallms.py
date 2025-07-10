@@ -621,6 +621,7 @@ class VLLM(TemplateLM):
             cont = self._model_generate(
                 requests=context_encoding,
                 generate=True,
+                stop=until,
                 max_tokens=max_gen_toks,
                 **kwargs,
             )
