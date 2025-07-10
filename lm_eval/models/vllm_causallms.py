@@ -617,6 +617,7 @@ class VLLM(TemplateLM):
             context_encoding = [x[-max_ctx_len:] for x in context_encoding]
 
             # perform batched generation
+            print(until)
             cont = self._model_generate(
                 requests=context_encoding,
                 generate=True,
